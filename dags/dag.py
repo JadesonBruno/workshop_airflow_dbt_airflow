@@ -39,7 +39,7 @@ profile_config = profile_config_dev if dbt_env == "dev" else profile_config_prod
 
 my_cosmos_dag = DbtDag(
     project_config=ProjectConfig(
-        dbt_project_path="/usr/local/airflow/dbt/jornada_dw",
+        dbt_project_path="/usr/local/airflow/dbt/workshop-airflow-dbt-data-warehouse/jornada_dw",
         project_name="jornada_dw",
     ),
     profile_config=profile_config,
