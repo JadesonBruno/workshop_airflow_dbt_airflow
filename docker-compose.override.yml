@@ -1,7 +1,11 @@
 services:
   scheduler:
+    environment:
+      - AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT=120
     volumes:
-      - ./dbt/jornada_dw:/usr/local/airflow/dbt/jornada_dw
+      - ./dbt/workshop-airflow-dbt-data-warehouse/jornada_dw:/usr/local/airflow/dbt/jornada_dw
   dag-processor:
+    environment:
+      - AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT=120
     volumes:
-      - ./dbt/jornada_dw:/usr/local/airflow/dbt/jornada_dw
+      - ./dbt/workshop-airflow-dbt-data-warehouse/jornada_dw:/usr/local/airflow/dbt/jornada_dw
