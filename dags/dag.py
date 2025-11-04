@@ -27,10 +27,7 @@ profile_config_prod = ProfileConfig(
     target_name="prod",
     profile_mapping=RedshiftUserPasswordProfileMapping(
         conn_id="aws_redshift_dw",
-        profile_args={
-            "schema": "public",
-            "database": "sjagro_dw",
-        },
+        profile_args={"schema": "public"}
     ),
 )
 
